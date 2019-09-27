@@ -12,7 +12,18 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+      
+        // Screen Size の取得
+        let screenWidth = self.view.bounds.width
+        let screenHeight = self.view.bounds.height
+        
+        let testDraw = Draw(frame: CGRect(x: 0, y: 0,
+                                              width: screenWidth, height: screenHeight))
+        self.view.addSubview(testDraw)
+        
+        // 不透明にしない（透明）
+        testDraw.isOpaque = false
+        
     }
 
 
